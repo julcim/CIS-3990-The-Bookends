@@ -53,19 +53,60 @@
     background-color: #E9EDC9;
     border-radius: 15px;
     transition: box-shadow .3s;
-    font-size: 20px;
     height: 220px;
 }
+
+.current_read p {
+    font-size: 20px;
+    margin-left:23px;
+    padding-top: 10px;
+    margin-bottom: -2px;
+}
+
 .explore_shelves {
     background-color: #E9EDC9;
     border-radius: 15px;
     transition: box-shadow .3s;
+    height: 162px;
 }
+
+.explore_shelves p {
+    font-size: 20px;
+    margin-left: 23px;
+    padding-top: 10px;
+    margin-bottom: -2px;
+}
+
+.book_options {
+    display: flex;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: -10px;
+    height: 90px;
+}
+.book_options>div {
+    flex: 1;
+}
+.book_options p {
+    text-align: center;
+    font-size: 15px;
+    margin-left: -2px;
+}
+
 .explore_recommendations {
     background-color: #E9EDC9;
     border-radius: 15px;
     transition: box-shadow .3s;
+    height: 162px;
 }
+
+.explore_recommendations p {
+    font-size: 20px;
+    margin-left: 23px;
+    padding-top: 10px;
+    margin-bottom: -2px;
+}
+
 
 .rightSide:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, .4);
@@ -143,11 +184,15 @@
     margin-left: 23px;
     margin-right: 23px;
     height: 153px;
-    background-color: aqua;
 }
 
 .sub2 p {
     margin-left: 30px;
+    padding: 0px;
+}
+
+.author p {
+    font-size: 15px;
 }
 
 .book_image {
@@ -174,6 +219,7 @@
 
 .progressBarBorderLeft {
     margin-left: 30px;
+    margin-top: -30px;
     width: 200px;
     background-color: white;
     border-radius: 15px;
@@ -202,7 +248,7 @@
     padding-top: 3px;
     width: 50%;
     font-size: 14px;
-    margin-left: 100px;
+    margin-left: 210px;
 }
 
 .memberNames1 {
@@ -250,4 +296,8 @@
     font-size: 16px;
     margin-top: 11px;
     margin-left: 9px;
+}
+
+.fa-circle {
+    color: white;
 }
