@@ -12,7 +12,7 @@
 }
 
 .flex-container>div {
-    background-color: #E9EDC9;
+    
     margin-top: 40px;
     margin-bottom: 40px;
     
@@ -29,15 +29,68 @@
 }
 
 .rightSide {
+    background-color: #E9EDC9;
+    transition: box-shadow .3s;
     width: 634px;
     margin-left: 20px;
     margin-right: 40px;
 }
 
+.search_bar {
+    margin-left: 0px;
+    height: 30px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+}
+.search_bar p {
+    color: #A9A9AC;
+    margin-left: 23px;
+    font-size: 15px;
+    padding-top:4px;
+}
+.current_read {
+    background-color: #E9EDC9;
+    border-radius: 15px;
+    transition: box-shadow .3s;
+    font-size: 20px;
+    height: 220px;
+}
+.explore_shelves {
+    background-color: #E9EDC9;
+    border-radius: 15px;
+    transition: box-shadow .3s;
+}
+.explore_recommendations {
+    background-color: #E9EDC9;
+    border-radius: 15px;
+    transition: box-shadow .3s;
+}
+
+.rightSide:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+}
+.current_read:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+}
+.explore_shelves:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+}
+.explore_recommendations:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+}
+
 .title_club {
-    font-size: 40px;
+    font-size: 39px;
     margin-top: -35px;
     margin-left: 10px;
+    margin-bottom: -15px;
+}
+
+.title_club_left {
+    font-size: 39px;
+    margin-top: -35px;
+    margin-left: 0px;
     margin-bottom: -15px;
 }
 
@@ -64,7 +117,7 @@
 }
 
 .textAddClub {
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 15px;
     border-style: solid;
     border-width: 1px;
@@ -84,15 +137,44 @@
     margin-left: 30px;
 }
 
+.sub2 {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 23px;
+    margin-right: 23px;
+    height: 153px;
+    background-color: aqua;
+}
+
+.sub2 p {
+    margin-left: 30px;
+}
+
 .book_image {
     height: auto;
     width: auto;
     max-width: 100px;
     max-height: 100px;
 }
+
+.book_image_left {
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+
 .progressBarBorder {
     margin-left: 30px;
     width: 350px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.progressBarBorderLeft {
+    margin-left: 30px;
+    width: 200px;
     background-color: white;
     border-radius: 15px;
 }
@@ -108,6 +190,19 @@
     width: 50%;
     font-size: 14px;
     margin-left: 360px;
+}
+
+.progressBarLeft {
+    width: 200px;
+    background-color: #D4A373;
+    border-radius: 15px;
+}
+
+.progressBarLeft p {
+    padding-top: 3px;
+    width: 50%;
+    font-size: 14px;
+    margin-left: 100px;
 }
 
 .memberNames1 {
