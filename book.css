@@ -1,0 +1,242 @@
+.screen {
+    height: 834px;
+    width: 1194px;
+    border-color: black;
+    border-style: solid;
+    margin: 40px;
+    padding: 20px;
+    font-size: 26px;
+}
+
+h1 {
+    font-family: Lora;
+}
+
+.highlight-flex-box {
+    flex: 50%;
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 22px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px
+}
+
+.bui {
+    flex: 20%;
+    top: 5px;
+    margin-top: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 22px;
+
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.font {
+    margin-top: 5px;
+}
+
+
+
+.circle1 {
+    margin-top: 4px;
+    margin-left: 10px;
+    height: 22px;
+    width: 22px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.circle2 {
+    margin-top: 4px;
+    margin-left: 10px;
+    height: 22px;
+    width: 22px;
+    background-color: greenyellow;
+    border-radius: 50%;
+}
+
+.circle3 {
+    margin-top: 4px;
+    margin-left: 10px;
+    height: 22px;
+    width: 22px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+
+
+
+
+.flex-header {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.flex-header2 {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+    gap: 35px;
+    text-align: justify;
+    padding: 15px;
+}
+
+.column1 {
+    flex: 50%;
+}
+
+.column2 {
+    flex: 50%;
+}
+
+.arrow {
+    font-size: 10px;
+    margin-left: 2px;
+    margin-top: 15px;
+}
+
+.font-flex-box {
+    flex: 30%;
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 22px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px
+}
+
+.change-font-size {
+    display: flex-column;
+    margin-left: 10px
+}
+
+.font-arrow-up {
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+.font-arrow-down {
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+.font-arrow-number {
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+
+
+
+.react-flex-box {
+    flex: 30%;
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 22px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px
+}
+
+.arrow-react {
+    font-size: 10px;
+    margin-left: 2px;
+    margin-top: 10px;
+}
+
+.emoji-crying {
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.emoji-heart {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.users-flex-box {
+    flex: 50%;
+    display: flex;
+    margin-left: 20px;
+}
+
+.name1 {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px
+}
+
+.name2 {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px
+}
+
+.name3 {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px
+}
+
+.comment-flex-box {
+    flex: 15%;
+    display: flex;
+    margin-left: 20px
+}
+
+.comment-button {
+    font-size: 35px
+}
+
+.exit {
+    flex: 10%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px
+}
+
+.footer-flex-box {
+    display: flex;
+    margin-top: 6px
+}
+
+.page-no-left {
+    margin-left: 250px
+}
+
+.page-no-right {
+    margin-left: 625px
+}
