@@ -1,9 +1,158 @@
-div {
+.ipadScreen {
     height: 834px;
     width: 1194px;
-    background-color: powderblue;
+    background-color: #CCD5AE;
+    font-family: Avenir;
+    border-radius: 15px;
 }
 
-h1 {
-    font-family: Avenir;
+.flex-container {
+    display: flex;
+    
+}
+
+.flex-container>div {
+    background-color: #E9EDC9;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    height: 714px;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.leftSide {
+    width: 440px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.rightSide {
+    width: 634px;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.title_club {
+    font-size: 40px;
+    margin-top: -35px;
+    margin-left: 10px;
+    margin-bottom: -15px;
+}
+
+.clubs {
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 177px;
+}
+.clubs p {
+    font-size: 20px;
+    margin-left: 23px;
+}
+
+.addClub {
+    margin-top: 100px;
+    text-align: center;
+    justify-content: center;
+}
+
+.textAddClub {
+    font-size: 20px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.sub1 {
+    display: flex;
+    margin-top: -12px;
+    margin-left: 23px;
+    margin-right: 23px;
+    height: 108px;
+}
+
+.sub1 p {
+    margin-left: 30px;
+}
+
+.book_image {
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+.progressBarBorder {
+    margin-left: 30px;
+    width: 350px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.progressBar {
+    width: 350px;
+    background-color: #D4A373;
+    border-radius: 15px;
+}
+
+.progressBar p {
+    padding-top: 3px;
+    width: 50%;
+    font-size: 14px;
+    margin-left: 360px;
+}
+
+.memberNames1 {
+    float: left;
+    margin-top: -55px;
+    margin-left: 130px;
+    width: 44px;
+    height: 44px;
+    background-color: #D4A373;
+    border-radius: 10px;
+}
+.memberNames1 p {
+    font-size: 16px;
+    margin-top: 11px;
+    margin-left: 9px;
+}
+
+.memberNames2 {
+    float: left;
+    margin-top: -55px;
+    margin-left: 190px;
+    width: 44px;
+    height: 44px;
+    background-color: #D4A373;
+    border-radius: 10px;
+}
+
+.memberNames2 p {
+    font-size: 16px;
+    margin-top: 11px;
+    margin-left: 9px;
+}
+
+.memberNames3 {
+    float: left;
+    margin-top: -55px;
+    margin-left: 250px;
+    width: 44px;
+    height: 44px;
+    background-color: #D4A373;
+    border-radius: 10px;
+}
+
+.memberNames3 p {
+    font-size: 16px;
+    margin-top: 11px;
+    margin-left: 9px;
 }
