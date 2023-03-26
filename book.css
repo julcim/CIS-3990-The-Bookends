@@ -178,6 +178,11 @@ h1 {
     flex: 50%;
     display: flex;
     margin-left: 20px;
+    height: 38px;
+}
+.users-flex-box p {
+    margin-top: 3px;
+    text-align: center;
 }
 
 .name1 {
@@ -226,7 +231,13 @@ h1 {
     border-color: black;
     padding-left: 10px;
     padding-right: 10px;
-    margin-left: 10px
+    margin-left: 10px;
+    height: 38px;
+}
+
+.exit p {
+    margin-top: 3px;
+    text-align: center;
 }
 
 .footer-flex-box {
