@@ -1,0 +1,246 @@
+.ipadScreen {
+    height: 834px;
+    width: 1194px;
+    background-color: #CCD5AE;
+    font-family: Avenir;
+    border-radius: 15px;
+}
+
+.flex-container {
+    display: flex;
+    
+}
+
+.flex-container>div {
+    
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    height: 714px;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.leftSide {
+    width: 440px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.rightSide {
+    background-color: #E9EDC9;
+    transition: box-shadow .3s;
+    width: 634px;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.search_bar {
+    margin-left: 0px;
+    height: 30px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+}
+.search_bar p {
+    color: #A9A9AC;
+    margin-left: 23px;
+    font-size: 15px;
+    padding-top:4px;
+}
+.current_read {
+    background-color: #E9EDC9;
+    border-radius: 15px;
+    transition: box-shadow .3s;
+    height: 220px;
+}
+
+.current_read p {
+    font-size: 20px;
+    margin-left:23px;
+    padding-top: 10px;
+    margin-bottom: -2px;
+}
+
+.explore_shelves {
+    background-color: #E9EDC9;
+    border-radius: 15px;
+    transition: box-shadow .3s;
+    height: 162px;
+}
+
+.explore_shelves p {
+    font-size: 20px;
+    margin-left: 23px;
+    padding-top: 10px;
+    margin-bottom: -2px;
+}
+
+.book_options {
+    display: flex;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: -10px;
+    height: 90px;
+}
+.book_options>div {
+    flex: 1;
+}
+.book_options p {
+    text-align: center;
+    font-size: 15px;
+    margin-left: -2px;
+}
+
+.explore_recommendations {
+    background-color: #E9EDC9;
+    border-radius: 15px;
+    transition: box-shadow .3s;
+    height: 162px;
+}
+
+.explore_recommendations p {
+    font-size: 20px;
+    margin-left: 23px;
+    padding-top: 10px;
+    margin-bottom: -2px;
+}
+
+
+.rightSide:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+}
+.current_read:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+}
+.explore_shelves:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+}
+.explore_recommendations:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+}
+
+.title_shelf_to_be_read {
+    font-size: 39px;
+    margin-top: -35px;
+    margin-left: 10px;
+    margin-bottom: -15px;
+}
+
+.title_shelf_Book {
+    font-size: 39px;
+    margin-top: -35px;
+    margin-left: 0px;
+    margin-bottom: -15px;
+}
+
+.clubs {
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 177px;
+}
+.clubs p {
+    font-size: 20px;
+    margin-left: 23px;
+}
+
+
+
+.sub1 {
+    display: flex;
+    margin-top: -12px;
+    margin-left: 23px;
+    margin-right: 23px;
+    height: 108px;
+}
+
+.sub1 p {
+    margin-left: 30px;
+}
+
+.sub2 {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 23px;
+    margin-right: 23px;
+    height: 153px;
+}
+
+.sub2 p {
+    margin-left: 30px;
+    padding: 0px;
+}
+
+.author p {
+    font-size: 15px;
+}
+
+.book_image {
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.book_image_left {
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+
+.progressBarBorder {
+    margin-left: 30px;
+    width: 350px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.progressBarBorderLeft {
+    margin-left: 30px;
+    margin-top: -30px;
+    width: 200px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.progressBar {
+    width: 350px;
+    background-color: #D4A373;
+    border-radius: 15px;
+}
+
+.progressBar p {
+    padding-top: 3px;
+    width: 50%;
+    font-size: 14px;
+    margin-left: 360px;
+}
+
+.progressBarLeft {
+    width: 200px;
+    background-color: #D4A373;
+    border-radius: 15px;
+}
+
+.progressBarLeft p {
+    padding-top: 3px;
+    width: 50%;
+    font-size: 14px;
+    margin-left: 210px;
+}
+
+
+
+
+.fa-circle {
+    color: white;
+}
