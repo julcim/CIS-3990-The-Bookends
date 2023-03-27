@@ -275,6 +275,15 @@ h1 {
     width: 20px;
     margin-left: 550px;
 }
+.place_emoji2 {
+    float: left;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 20px;
+    margin-left: 575px;
+}
 
 .box_for_emoji {
     height: 20px;
