@@ -17,6 +17,9 @@ function allowDrop(ev) {
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
+function drag1(ev) {
+    ev.target.innerHTML = "";
+}
 
 function drop(ev) {
     ev.preventDefault();
