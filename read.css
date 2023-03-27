@@ -66,8 +66,11 @@
 .explore_shelves {
     background-color: #E9EDC9;
     border-radius: 15px;
+    height: 171px;
+}
+
+.shader {
     transition: box-shadow .3s;
-    height: 162px;
 }
 
 .explore_shelves p {
@@ -97,7 +100,7 @@
     background-color: #E9EDC9;
     border-radius: 15px;
     transition: box-shadow .3s;
-    height: 162px;
+    height: 171px;
 }
 
 .explore_recommendations p {
@@ -108,13 +111,16 @@
 }
 
 
-.rightSide:hover {
+/* .rightSide:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+} */
+.back_arrow:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, .4);
 }
 .current_read:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, .4);
 }
-.explore_shelves:hover {
+.shader:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, .4);
 }
 .explore_recommendations:hover {
@@ -149,6 +155,7 @@
 .clubs p {
     font-size: 20px;
     margin-left: 23px;
+    margin-top: 15px;
 }
 
 .addClub {
@@ -167,11 +174,18 @@
     margin-right: 200px;
 }
 .sub1 {
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 78px 78px 78px 78px;
+    justify-content: space-between;
     margin-top: -12px;
     margin-left: 23px;
-    margin-right: 23px;
-    height: 108px;
+    margin-right: 10px;
+    height: 80px;
+}
+
+.sub1 div {
+    flex-shrink: 1;
 }
 
 .sub1 p {
@@ -199,7 +213,8 @@
     height: auto;
     width: auto;
     max-width: 100px;
-    max-height: 100px;
+    max-height: 80px;
+    /* display: inline-block; */
 }
 
 .book_image_left {
@@ -306,4 +321,13 @@
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
+}
+
+.back_arrow {
+    position: absolute;
+    margin-left: 545px;
+    margin-top: -70px;
+    font-size: 30px;
+    transition: box-shadow .3s;
+    border-radius: 15px;
 }

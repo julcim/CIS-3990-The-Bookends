@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bookends Home Screen</title>
+    <title>Horror Screen</title>
     <link rel="stylesheet" href="read.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -45,13 +45,13 @@
                 <div class="explore_shelves">
                     <p>Explore My Shelves</p>
                     <div class="book_options">
-                        <div style="background-color: #DBC3AC; margin-left: 5px; margin-right:35px;">
+                        <div class="shader" onclick="location.href='to_be_read.html'" style="background-color: #DBC3AC; margin-left: 5px; margin-right:35px;">
                             <p>To Be Read</p>
                         </div>
-                        <div style="background-color: #C7AE96; margin-left:35px; margin-right:35px;">
+                        <div class="shader" onclick="location.href='read.html'" style="background-color: #C7AE96; margin-left:35px; margin-right:35px;">
                             <p>Read</p>
                         </div>
-                        <div style="background-color: #807462; margin-left:35px; margin-right: 5px;">
+                        <div class="shader" onclick="location.href='horror.html'" style="background-color: #807462; margin-left:35px; margin-right: 5px;">
                             <p>Horror</p>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                         <i class="fa fa-circle" aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="explore_recommendations">
+                <div class="explore_recommendations" onclick="location.href='recommendation.html'">
                     <p>Explore Book Recommendations</p>
                     <div class="book_options">
                         <div style="margin-left: 5px; margin-right:35px;">
@@ -84,94 +84,71 @@
             <div class="rightSide">
                 <div class="title_club"> 
                     <p>Horror</p>
-    
-                    
+                </div>
+                <div class="back_arrow" onclick="location.href='home.html'">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
                 </div>
                 <div class="clubs">
                     <p>Psychological Horrors</p>
                     <div class="sub1">
-                        <div class="book_image" style="margin-left: 15px; margin-right:50px;">
-                            
-                            <img src="after_dark.jpg" alt="After dark" width="auto" height="108">
+                        <div class="book_image" >
+                            <img src="after_dark.jpg" alt="After dark" width="auto" height="94">
                         </div>
-                        <div class="book_image"  style="margin-left: 15px; margin-right:50px;">
-                            <img src="angelmaker.jpg" alt="Angelmaker" width="auto" height="108">
+                        <div class="book_image">
+                            <img src="angelmaker.jpg" alt="Angelmaker" width="auto" height="94">
                         </div>
-                        <div class="book_image"  style="margin-left: 15px; margin-right:50px;">
-                            <img src="between.jpg" alt="Lord of the rings" width="auto" height="108">
+                        <div class="book_image">
+                            <img src="between.jpg" alt="between" width="auto" height="94">
                         </div>
-                        <div class="book_image"  style="margin-left: 15px; margin-right:50px;">
-                            <img src="haunting.jpg" alt="1984" width="auto" height="108">
+                        <div class="book_image">
+                            <img src="haunting.jpg" alt="haunting" width="auto" height="94">
                         </div>
-                        <div style="font-size: small; text-align: center; margin-left: -300px; margin-top: +100px">
-                            <i class="fa fa-circle" style="color:#A9A9A9" aria-hidden="true"></i>&nbsp;
-                            <i class="fa fa-circle" aria-hidden="true"></i>&nbsp;
-                           
-                        </div>
-                        <div>
-                           
-                            
-                            
-                        </div>
+                    </div>
+                    <div style="font-size: small; text-align: center; margin-top: 20px">
+                        <i class="fa fa-circle" style="color:#A9A9A9" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-circle" aria-hidden="true"></i>&nbsp;
                     </div>
                 </div>
                 <div class="clubs">
                     <p> Only Stephen King</p>
                     <div class="sub1">
-                        <div class="book_image" style="margin-left: 15px; margin-right:50px;">
-                            <img src="misery.jpg" alt="Misery" width="auto" height="108">
+                        <div class="book_image">
+                            <img src="misery.jpg" alt="Misery" width="auto" height="94">
                         </div>
-                        <div class="book_image"  style="margin-left: 15px; margin-right:50px;">
-                            <img src="redemption.jpg" alt="redemption" width="auto" height="108">
+                        <div class="book_image">
+                            <img src="redemption.jpg" alt="redemption" width="auto" height="94">
                         </div>
-                        <div class="book_image"  style="margin-left: 15px; margin-right:50px;">
-                            <img src="mercedes.jpg" alt="Mr.Mercedes" width="auto" height="108">
+                        <div class="book_image">
+                            <img src="mercedes.jpg" alt="Mr.Mercedes" width="auto" height="94">
                         </div>
-                        <div class="book_image"  style="margin-left: 15px; margin-right:50px;">
-                            <img src="outsider.jpg" alt="The Outsider" width="auto" height="108">
+                        <div class="book_image">
+                            <img src="outsider.jpg" alt="The Outsider" width="auto" height="94">
                         </div>
-                        <div style="font-size: small; text-align: center; margin-left: -300px; margin-top: +100px">
-                            <i class="fa fa-circle" style="color:#A9A9A9" aria-hidden="true"></i>&nbsp;
-                            <i class="fa fa-circle" aria-hidden="true"></i>&nbsp;
-                
-                        </div>
-                
-                        <div>
-                           
-                    
-                            
-                           
-                        </div>
+                    </div>
+                    <div style="font-size: small; text-align: center; margin-top: 20px">
+                        <i class="fa fa-circle" style="color:#A9A9A9" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-circle" aria-hidden="true"></i>&nbsp;
                     </div>
                 </div>
                 <div class="clubs">
                     <p> Mildly Scary</p>
                     <div class="sub1">
-                        <div class="book_image" style="margin-left: 15px; margin-right:50px;">
-                            <img src="human.jpg" alt="No Longer Human" width="auto" height="108">
+                        <div class="book_image">
+                            <img src="human.jpg" alt="No Longer Human" width="auto" height="94">
                         </div>
-                        <div class="book_image"  style="margin-left: 15px; margin-right:50px;">
-                            <img src="island.jpg" alt="The Island" width="auto" height="108">
+                        <div class="book_image">
+                            <img src="island.jpg" alt="The Island" width="auto" height="94">
                         </div>
-                        <div class="book_image"  style="margin-left: 15px; margin-right:50px;">
-                            <img src="monsters.jpg" alt="Delicious Monsters" width="auto" height="108">
+                        <div class="book_image">
+                            <img src="monsters.jpg" alt="Delicious Monsters" width="auto" height="94">
                         </div>
-                        <div class="book_image"  style="margin-left: 15px; margin-right:50px;">
-                            <img src="spite_house.jpg" alt="The Spite House" width="auto" height="108">
+                        <div class="book_image">
+                            <img src="spite_house.jpg" alt="The Spite House" width="auto" height="94">
                         </div>
-                        <div style="font-size: small; text-align: center; margin-left: -300px; margin-top: +100px">
-                            <i class="fa fa-circle" style="color:#A9A9A9" aria-hidden="true"></i>&nbsp;
-                            <i class="fa fa-circle" aria-hidden="true"></i>&nbsp;
-                
-                        </div>
-                        
-                
-                        <div>
-                           
-                    
-                            
-                           
-                        </div>
+                    </div>
+                    <div style="font-size: small; text-align: center; margin-top: 20px">
+                        <i class="fa fa-circle" style="color:#A9A9A9" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-circle" aria-hidden="true"></i>&nbsp;
                     </div>
                 </div>
                 
