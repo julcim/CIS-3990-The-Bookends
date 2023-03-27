@@ -158,20 +158,28 @@ h1 {
     margin-left: 20px
 }
 
+.react {
+    font-family: Lora;
+}
+
+.dropdown {
+    float: left;
+    margin-left: 70px;
+    margin-top: -22px;
+    width: 19px;
+}
+
+
 .arrow-react {
     font-size: 10px;
     margin-left: 2px;
     margin-top: 10px;
 }
 
-.emoji-crying {
+.emoji {
     font-size: 20px;
     margin-left: 8px;
-}
-
-.emoji-heart {
-    font-size: 20px;
-    margin-left: 5px;
+    margin-top: 3px;
 }
 
 .users-flex-box {
@@ -256,4 +264,19 @@ h1 {
 
 .page-no-right {
     margin-left: 625px
+}
+
+.place_emoji {
+    float: left;
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 20px;
+    margin-left: 550px;
+}
+
+.box_for_emoji {
+    height: 20px;
+    width: 20px;
 }
