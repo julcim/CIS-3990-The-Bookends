@@ -233,6 +233,11 @@ h1 {
     padding-right: 10px;
     margin-left: 10px;
     height: 38px;
+    transition: box-shadow .3s;
+}
+
+.exit:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
 }
 
 .exit p {
