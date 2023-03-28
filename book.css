@@ -188,6 +188,7 @@ h1 {
     margin-left: 20px;
     height: 38px;
 }
+
 .users-flex-box p {
     margin-top: 3px;
     text-align: center;
@@ -228,7 +229,7 @@ h1 {
     margin-left: 20px
 }
 
-.comment-button {
+.commentbutton {
     font-size: 35px
 }
 
@@ -268,13 +269,14 @@ h1 {
 
 .place_emoji {
     float: left;
-    position:absolute;
+    position: absolute;
     display: flex;
     flex-direction: column;
     height: 700px;
     width: 20px;
     margin-left: 550px;
 }
+
 .place_emoji2 {
     float: left;
     position: absolute;
@@ -288,4 +290,94 @@ h1 {
 .box_for_emoji {
     height: 20px;
     width: 20px;
+}
+
+.chatbox {
+    z-index: 1000;
+    position: relative;
+    height: 500px;
+    width: 500px;
+    top: -700px;
+    bottom: 2px;
+    right: -20px;
+    left: 675px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+    opacity: 0;
+}
+
+.chatbox-alex-name {
+    position: relative;
+    top: 30px;
+    left: 10px;
+
+}
+
+.chatbox-carmen-name {
+    position: relative;
+    top: 30px;
+    left: 10px;
+
+}
+
+.chatbox-alex-text {
+    position: relative;
+    top: 5px;
+    padding: 10px;
+    left: 100px;
+    width: 350px;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 15px;
+
+
+}
+
+.chatbox-carmen-text {
+    position: relative;
+    top: 0px;
+    padding: 10px;
+    left: 100px;
+    width: 350px;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 15px;
+
+}
+
+.chatbox-mycomment {
+    position: relative;
+    left: 10px;
+    top: 30px;
+}
+
+.textbox {
+    position: relative;
+    left: 10px
+}
+
+.textbox-text {
+    position: relative;
+    left: 85px;
+    width: 375px;
+}
+
+.textbox-label {
+    position: relative;
+    left: 5px;
+    top: 30px;
+}
+
+
+.exit-chatbox {
+    position: relative;
+    left: 470px
 }
