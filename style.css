@@ -66,8 +66,12 @@
 .explore_shelves {
     background-color: #E9EDC9;
     border-radius: 15px;
+    
+    height: 171px;
+}
+
+.shader {
     transition: box-shadow .3s;
-    height: 162px;
 }
 
 .explore_shelves p {
@@ -97,7 +101,7 @@
     background-color: #E9EDC9;
     border-radius: 15px;
     transition: box-shadow .3s;
-    height: 162px;
+    height: 171px;
 }
 
 .explore_recommendations p {
@@ -108,13 +112,13 @@
 }
 
 
-.rightSide:hover {
+/* .rightSide:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, .4);
-}
+} */
 .current_read:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, .4);
 }
-.explore_shelves:hover {
+.shader:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, .4);
 }
 .explore_recommendations:hover {
