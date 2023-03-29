@@ -173,9 +173,9 @@
                         </div>
 
                     </div>
-                    <div class="comment-flex-box">
-                        <div class="commentbutton">
-                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                    <div class="comment-flex-box" onclick="toggleDiv('chatbox')">
+                        <div class="commentbutton" >
+                            &nbsp;&hairsp;<i class="fa fa-comment-o" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="exit" onclick="location.href='home.html'">
@@ -287,47 +287,34 @@
         </div>
 
 
-        <div class="chatbox">
-            <div class="exit-chatbox">
-                X
+        <div class="chatbox" id="chatbox">
+            <div class="innerChat" id="innerChat">
+                <div class="exit-chatbox" onclick="toggleDiv('chatbox')">
+                    X
+                </div>
+                <div class="chatbox-alex-name">
+                    Alex:
+                </div>
+                <div class="chatbox-alex-text">
+                    I thought that was a good way to foreshadow the future events. I think the author did a great job of
+                    describing that scene. What are your thoughts? Did you notice something similar?
+                </div>
+                <div class="chatbox-carmen-name">
+                    Carl:
+                </div>
+                <div class="chatbox-carmen-text">
+                    I agree! I think it was really entertaining to the reader to try and figure out exactly what the author
+                    was trying to foreshadow, and it was so rewarding when I guessed the correct event!
+                </div>
             </div>
-            <div class="chatbox-border">
-
-            </div>
-            <div class="chatbox-alex-name">
-                Alex:
-            </div>
-            <div class="chatbox-alex-text">
-                I thought that was a good way to foreshadow the future events. I think the author did a great job of
-                describing that scene. What are your thoughts? Did you notice something similar?
-            </div>
-            <div class="chatbox-carmen-name">
-                Carl:
-            </div>
-            <div class="chatbox-carmen-text">
-                I agree! I think it was really entertaining to the reader to try and figure out exactly what the author
-                was trying to foreshadow, and it was so rewarding when I guessed the correct event!
-            </div>
-
             <div class="textbox">
-                <label class="textbox-label" for="freeform">Me:</label>
+                <label class="textbox-label" for="freeform1">Me:</label>
                 <br>
-
-                <textarea class="textbox-text" id="freeform" name="freeform" rows="4" cols="50">
-            Enter your comment here...
-</textarea>
-
+                <textarea class="textbox-text" id="freeform" name="freeform" rows="4" cols="50"
+                    placeholder="Enter comment here"></textarea>
             </div>
-
         </div>
-
-
-
-
-
     </div>
-
-
 </body>
 
 </html>
