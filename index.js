@@ -60,7 +60,7 @@ function init() {
             newDiv.style.top = "0px";
             newDiv.style.padding = "10px";
             newDiv.style.left = "100px";
-            newDiv.style.width = "350px";
+            newDiv.style.width = "330px";
             newDiv.style.fontSize = "20px";
             newDiv.style.borderStyle = "solid";
             newDiv.style.borderWidth = "1px";

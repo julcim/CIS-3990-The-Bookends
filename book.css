@@ -315,7 +315,6 @@ h1 {
 }
 
 .chatbox {
-    z-index: 1000;
     position: relative;
     height: 500px;
     width: 500px;
@@ -352,7 +351,7 @@ h1 {
     top: 5px;
     padding: 10px;
     left: 100px;
-    width: 350px;
+    width: 330px;
     font-size: 20px;
     border-style: solid;
     border-width: 1px;
@@ -367,7 +366,7 @@ h1 {
     top: 0px;
     padding: 10px;
     left: 100px;
-    width: 350px;
+    width: 330px;
     font-size: 20px;
     border-style: solid;
     border-width: 1px;
@@ -398,7 +397,7 @@ h1 {
     border-color: black;
     border-radius: 15px;
     margin-left: -370px;
-    width: 355px;
+    width: 335px;
     padding-left: 10px;
     padding-top: 10px;
     margin-top: -10px;
@@ -421,26 +420,13 @@ h1 {
 
 
 .exit-chatbox {
-    position: relative;
+    position: fixed;
     transition: box-shadow .3s;
-    left: 460px;
+    margin-left: 460px;
     border-style: solid;
     border-width: 1px;
     border-color: black;
     border-radius: 20px;
     width: 40px;
     text-align: center;
-}
-
-.chatbox-to-fill {
-    position: relative;
-    top: 0px;
-    padding: 10px;
-    left: 100px;
-    width: 350px;
-    font-size: 20px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    border-radius: 15px;
 }
