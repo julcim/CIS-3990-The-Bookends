@@ -225,7 +225,7 @@ h1 {
     padding-right: 10px;
     margin-left: 10px;
     border-radius: 22px;
-    
+
 }
 
 .comment-flex-box {
@@ -235,10 +235,10 @@ h1 {
     transition: box-shadow .3s;
     border-style: solid;
     border-width: 1px;
-    border-color: black;
+    border-color: white;
     border-radius: 22px;
     width: 30px;
-    
+
 }
 
 .commentbutton {
@@ -410,6 +410,7 @@ h1 {
     left: 5px;
     top: 30px;
 }
+
 ::-webkit-input-placeholder {
     text-align: center;
 }
