@@ -150,12 +150,12 @@
                     <div class="react-flex-box">
                         <div class="react">
                             <label for="reaction">React</label>
-                            <select onChange="onEmojiChange();" class="dropdown" name="reaction" id="reaction">
+                            <select style="cursor:pointer" onChange="onEmojiChange();" class="dropdown" name="reaction" id="reaction">
                                 <option value="emoji-crying" onSelect="onEmojiChange();">&#128557</option>
                                 <option value="emoji-broken-heart" onSelect="onEmojiChange();">&#128148</option>
                             </select>
                         </div>
-                        <div class="emoji" id="emoji" draggable="true" ondragstart="drag(event)"></div>
+                        <div class="emoji" style="cursor:pointer" id="emoji" draggable="true" ondragstart="drag(event)"></div>
 
                     </div>
                     <div class="users-flex-box">
@@ -173,12 +173,12 @@
                         </div>
 
                     </div>
-                    <div class="comment-flex-box" onclick="toggleDiv('chatbox')">
+                    <div class="comment-flex-box" style="cursor:pointer" onclick="toggleDiv('chatbox')">
                         <div class="commentbutton" >
                             &nbsp;&hairsp;<i class="fa fa-comment-o" aria-hidden="true"></i>
                         </div>
                     </div>
-                    <div class="exit" onclick="location.href='home.html'">
+                    <div class="exit" style="cursor:pointer" onclick="location.href='home.html'">
                         <p>X</p>
                     </div>
                 </div>
@@ -289,7 +289,7 @@
 
         <div class="chatbox" id="chatbox" style="display: none;">
             <div class="innerChat" id="innerChat">
-                <div class="exit-chatbox" onclick="toggleDiv('chatbox')">
+                <div class="exit-chatbox" style="cursor:pointer" onclick="toggleDiv('chatbox')">
                     X
                 </div>
                 <div class="chatbox-alex-name">
