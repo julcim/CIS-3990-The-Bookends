@@ -14,9 +14,16 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
+document.getElementById('bui').addEventListener('click', function () {
+    document.getElementById("body").setAttribute(cursor, "url('citr.jpg'), auto");
+})
+
+
+
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
+
 function drag1(ev) {
     ev.target.innerHTML = "";
 }
@@ -55,7 +62,7 @@ function init() {
 
             const newDiv = document.createElement("div");
             var newContent = document.createTextNode(document.getElementById("freeform").value);
-            document.getElementById("freeform").value="";
+            document.getElementById("freeform").value = "";
             newDiv.style.position = "relative";
             newDiv.style.top = "0px";
             newDiv.style.padding = "10px";
@@ -80,6 +87,8 @@ document.addEventListener('readystatechange', function () {
         init();
     }
 });
+
+
 
 
 
