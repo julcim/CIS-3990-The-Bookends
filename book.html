@@ -8,6 +8,11 @@
     <title>Bookends Home Screen</title>
     <link rel="stylesheet" href="book.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .changed_cursor {
+            cursor: url('citr.jpg'), auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -54,74 +59,7 @@
 
                 </div>
                 <div class="place_emoji">
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
-                    <div class="box_for_emoji" ondrop="drop(event)" ondragover="allowDrop(event)"
-                        onclick="drag1(event)">&nbsp;</div>
+
                 </div>
                 <div>
                     &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -150,12 +88,15 @@
                     <div class="react-flex-box">
                         <div class="react">
                             <label for="reaction">React</label>
-                            <select style="cursor:pointer" onChange="onEmojiChange();" class="dropdown" name="reaction" id="reaction">
+                            <select style="cursor:pointer" onChange="onEmojiChange();" class="dropdown" name="reaction"
+                                id="reaction">
                                 <option value="emoji-crying" onSelect="onEmojiChange();">&#128557</option>
                                 <option value="emoji-broken-heart" onSelect="onEmojiChange();">&#128148</option>
                             </select>
                         </div>
-                        <div class="emoji" style="cursor:pointer" id="emoji" draggable="true" ondragstart="drag(event)"></div>
+                        <div class="emoji" style="cursor:pointer" id="emoji" clickable="true"
+                            onclick="changeCursorToEmoji()">
+                        </div>
 
                     </div>
                     <div class="users-flex-box">
@@ -174,7 +115,7 @@
 
                     </div>
                     <div class="comment-flex-box" style="cursor:pointer" onclick="toggleDiv('chatbox')">
-                        <div class="commentbutton" >
+                        <div class="commentbutton">
                             &nbsp;&hairsp;<i class="fa fa-comment-o" aria-hidden="true"></i>
                         </div>
                     </div>
@@ -303,7 +244,8 @@
                     Carl:
                 </div>
                 <div class="chatbox-carmen-text">
-                    I agree! I think it was really entertaining to the reader to try and figure out exactly what the author
+                    I agree! I think it was really entertaining to the reader to try and figure out exactly what the
+                    author
                     was trying to foreshadow, and it was so rewarding when I guessed the correct event!
                 </div>
             </div>

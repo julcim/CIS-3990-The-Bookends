@@ -431,3 +431,22 @@ h1 {
     width: 40px;
     text-align: center;
 }
+
+.place_emoji {
+    position: absolute;
+    left: -500px;
+    top: 40px;
+    width: 1240px;
+    height: 880px;
+    z-index: -1;
+
+}
+
+.users-flex-box:click {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👍</text></svg>") 16 0, auto;
+    /*!emojicursor.app*/
+}
+
+.body {
+    cursor: pointer;
+}
