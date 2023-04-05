@@ -15,6 +15,7 @@ function allowDrop(ev) {
 }
 
 var value = false;
+var selected = -1;
 
 function changeCursor(event) {
     if (value == false && event.target === document.getElementById("emoji") ) {
@@ -22,27 +23,64 @@ function changeCursor(event) {
         if (e.selectedIndex == 0) {
             document.getElementById("main_body").style.cursor = "url(heart.png), auto";
             value = true;
+            selected = 0;
         } else if (e.selectedIndex == 1) {
             document.getElementById("main_body").style.cursor = "url(like.png), auto";
             value = true;
+            selected = 1;
         } else if (e.selectedIndex == 2) {
             document.getElementById("main_body").style.cursor = "url(thumb-down.png), auto";
             value = true;
+            selected = 2;
         } else if (e.selectedIndex == 3) {
             document.getElementById("main_body").style.cursor = "url(laugh.png), auto";
             value = true;
+            selected = 3;
         } else if (e.selectedIndex == 4) {
             document.getElementById("main_body").style.cursor = "url(warning-sign.png), auto";
             value = true;
+            selected = 4;
         } else if (e.selectedIndex == 5) {
             document.getElementById("main_body").style.cursor = "url(question-mark.png), auto";
             value = true;
+            selected = 5;
         }
         
-    } else {
+    } else if (value == true) {
         document.getElementById("main_body").style.cursor = "auto";
         value = false;
-    }
+        const newDiv = document.createElement("div");
+
+        // Set the position of the new div to where the click occurred
+        newDiv.style.position = "absolute";
+        newDiv.style.left = event.pageX + "px";
+        newDiv.style.top = event.pageY + "px";
+        newDiv.addEventListener("click", function () {
+            // Remove the new div from the document
+            newDiv.remove();
+        });
+
+        // Add some content to the new div
+        if (selected == 0) {
+            newDiv.innerHTML = "&#128155";
+        } else if (selected == 1) {
+            newDiv.innerHTML = "&#128077";
+        } else if (selected == 2) {
+            newDiv.innerHTML = "&#128078";
+        } else if (selected == 3) {
+            newDiv.innerHTML = "&#128514";
+        } else if (selected == 4) {
+            newDiv.innerHTML = "&#10071";
+        } else if (selected == 5) {
+            newDiv.innerHTML = "&#10067";
+        }
+        
+
+        // Add the new div to the document body
+        document.body.appendChild(newDiv);
+
+        selected = -1;
+    } 
 }
 
 
@@ -77,7 +115,6 @@ function init() {
         // If the user presses the "Enter" key on the keyboard
         if (event.key === "Enter") {
             // Cancel the default action, if needed
-            console.log("Hit enter");
             event.preventDefault();
             // Trigger the button element with a click
             const newDiv0 = document.createElement("div");
