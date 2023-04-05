@@ -18,8 +18,27 @@ var value = false;
 
 function changeCursor(event) {
     if (value == false && event.target === document.getElementById("emoji") ) {
-        document.getElementById("main_body").style.cursor = "url(heart.png), auto";
-        value = true;
+        var e = document.getElementById('reaction');
+        if (e.selectedIndex == 0) {
+            document.getElementById("main_body").style.cursor = "url(heart.png), auto";
+            value = true;
+        } else if (e.selectedIndex == 1) {
+            document.getElementById("main_body").style.cursor = "url(like.png), auto";
+            value = true;
+        } else if (e.selectedIndex == 2) {
+            document.getElementById("main_body").style.cursor = "url(thumb-down.png), auto";
+            value = true;
+        } else if (e.selectedIndex == 3) {
+            document.getElementById("main_body").style.cursor = "url(laugh.png), auto";
+            value = true;
+        } else if (e.selectedIndex == 4) {
+            document.getElementById("main_body").style.cursor = "url(warning-sign.png), auto";
+            value = true;
+        } else if (e.selectedIndex == 5) {
+            document.getElementById("main_body").style.cursor = "url(question-mark.png), auto";
+            value = true;
+        }
+        
     } else {
         document.getElementById("main_body").style.cursor = "auto";
         value = false;
