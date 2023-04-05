@@ -8,19 +8,11 @@
     <title>Bookends Home Screen</title>
     <link rel="stylesheet" href="book.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .changed_cursor {
-            cursor: url('citr.jpg'), auto;
-        }
-    </style>
 </head>
 
 <body>
     <script src="index.js"></script>
-    <div class="screen">
-
-
-
+    <div class="screen" id="main_body" onClick="changeCursor(event)">
         <div class="row">
             <div class="column">
 
@@ -87,7 +79,7 @@
                 <div class="flex-header2">
                     <div class="react-flex-box">
                         <div class="react">
-                            <label for="reaction">React</label>
+                            <label for="reaction" >React</label>
                             <select style="cursor:pointer" onChange="onEmojiChange();" class="dropdown" name="reaction" id="reaction">
                                 <option value="emoji-heart" onSelect="onEmojiChange();">&#128155</option>
                                 <option value="emoji-thumbs-up" onSelect="onEmojiChange();">&#128077</option>
@@ -97,8 +89,7 @@
                                 <option value="emoji-question" onSelect="onEmojiChange();">&#10067</option>
                             </select>
                         </div>
-                        <div class="emoji" style="cursor:pointer" id="emoji" clickable="true"
-                            onclick="changeCursorToEmoji()">
+                        <div class="emoji" style="cursor:pointer" id="emoji" clickable="true">
                         </div>
 
                     </div>

@@ -14,9 +14,19 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
-document.getElementById('bui').addEventListener('click', function () {
-    document.getElementById("body").setAttribute(cursor, "url('citr.jpg'), auto");
-})
+var value = false;
+
+function changeCursor(event) {
+    if (value == false && event.target === document.getElementById("emoji") ) {
+        document.getElementById("main_body").style.cursor = "url(heart.png), auto";
+        value = true;
+    } else {
+        document.getElementById("main_body").style.cursor = "auto";
+        value = false;
+    }
+}
+
+
 
 
 
