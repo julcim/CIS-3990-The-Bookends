@@ -46,6 +46,41 @@ function changeCursor(event) {
             selected = 5;
         }
         
+        if (isEndCoordsSet == true) {
+            document.getElementById("main_body").style.cursor = "auto";
+            isEndCoordsSet = false;
+            value = false;
+            const newDiv = document.createElement("div");
+
+            // Set the position of the new div to where the click occurred
+            newDiv.style.position = "absolute";
+            newDiv.style.left = endCoords.x + "px";
+            newDiv.style.top = endCoords.y + "px";
+            newDiv.addEventListener("click", function () {
+                // Remove the new div from the document
+                newDiv.remove();
+            });
+
+            // Add some content to the new div
+            if (selected == 0) {
+                newDiv.innerHTML = "&#128155";
+            } else if (selected == 1) {
+                newDiv.innerHTML = "&#128077";
+            } else if (selected == 2) {
+                newDiv.innerHTML = "&#128078";
+            } else if (selected == 3) {
+                newDiv.innerHTML = "&#128514";
+            } else if (selected == 4) {
+                newDiv.innerHTML = "&#10071";
+            } else if (selected == 5) {
+                newDiv.innerHTML = "&#10067";
+            }
+
+            // Add the new div to the document body
+            document.body.appendChild(newDiv);
+
+            selected = -1;
+        } 
     } else if (value == true) {
         document.getElementById("main_body").style.cursor = "auto";
         value = false;
@@ -82,9 +117,6 @@ function changeCursor(event) {
         selected = -1;
     } 
 }
-
-
-
 
 
 function drag(ev) {
@@ -151,6 +183,34 @@ function init() {
 document.addEventListener('readystatechange', function () {
     if (document.readyState === "complete") {
         init();
+    }
+});
+
+let endCoords = { x: 0, y: 0 }; // Global variable to store end coordinates
+let isEndCoordsSet = false;
+
+function getLocationOfMouseUp(callback) {
+    // Add event listener for mouseup event
+    document.addEventListener('mouseup', function (event) {
+        const highlightedText = window.getSelection().toString(); // Get the highlighted text
+        if (highlightedText !== '') {
+            const selection = window.getSelection(); // Get the selection object
+            const range = selection.getRangeAt(0); // Get the range of the highlighted text
+            const rect = range.getBoundingClientRect(); // Get the bounding rect of the range
+            const cursorRect = selection.getRangeAt(0).getClientRects()[0]; // Get the rect of the cursor at the end of the range
+            endCoords.x = event.clientX - 20; // X coordinate of the cursor at the end of the event
+            endCoords.y = event.clientY - 20; 
+            isEndCoordsSet = true; // Set the global boolean flag to true
+            callback(highlightedText); // Call the callback function with highlighted text
+        }
+    });
+}
+
+// Usage
+getLocationOfMouseUp(function (highlightedText) {
+    console.log('Highlighted text:', highlightedText);
+    if (isEndCoordsSet) {
+        console.log('End coordinates:', endCoords);
     }
 });
 
