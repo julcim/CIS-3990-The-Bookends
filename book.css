@@ -447,7 +447,7 @@ h1 {
     /* Set the containing element as relative for absolute positioning */
     height: 100px;
     /* Set the height of the containing element */
-    margin-top: 50px;
+    margin-top: -60px;
 }
 
 .footer-flex-box {
