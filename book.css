@@ -279,18 +279,6 @@ h1 {
     text-align: center;
 }
 
-.footer-flex-box {
-    display: flex;
-    margin-top: 6px
-}
-
-.page-no-left {
-    margin-left: 250px
-}
-
-.page-no-right {
-    margin-left: 625px
-}
 
 .place_emoji {
     float: left;
@@ -452,4 +440,35 @@ h1 {
 
 .body {
     cursor: pointer;
+}
+
+.footer-container {
+    position: relative;
+    /* Set the containing element as relative for absolute positioning */
+    height: 100px;
+    /* Set the height of the containing element */
+    margin-top: 50px;
+}
+
+.footer-flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Center the text vertically */
+    position: absolute;
+    /* Set the footer as absolute for positioning */
+    bottom: 0;
+    
+    /* Position the footer at the bottom of the containing element */
+    left: 0;
+    /* Position the footer at the left of the containing element */
+    right: 0;
+    /* Position the footer at the right of the containing element */
+}
+
+.page-no-left,
+.page-no-right {
+    flex-basis: 50%;
+    text-align: center;
+    /* Center the text horizontally */
 }
