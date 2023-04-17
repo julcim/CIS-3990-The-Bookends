@@ -85,7 +85,9 @@ function changeCursor(event) {
             document.body.appendChild(newDiv);
 
             selected = -1;
-        } 
+        }  else if (isEndCoordsSet) {
+            isEndCoordsSet = false;
+        }
     } else if (value == true && (event.target === document.getElementById("Text1") || event.target === document.getElementById("Text2"))) {
         document.getElementById("main_body").style.cursor = "auto";
         value = false;
