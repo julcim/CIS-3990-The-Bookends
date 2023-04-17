@@ -18,7 +18,12 @@ var value = false;
 var selected = -1;
 
 function changeCursor(event) {
-    if (value == false && event.target === document.getElementById("emoji") ) {
+    if (value == true && (event.target !== document.getElementById("Text1") && event.target !== document.getElementById("Text2"))) {
+        value = false;
+        selected = -1;
+        document.getElementById("main_body").style.cursor = "auto";
+    }
+    if (value == false && event.target === document.getElementById("emoji")) {
         var e = document.getElementById('reaction');
         if (e.selectedIndex == 0) {
             document.getElementById("main_body").style.cursor = "url(heart.png), auto";
@@ -81,7 +86,7 @@ function changeCursor(event) {
 
             selected = -1;
         } 
-    } else if (value == true) {
+    } else if (value == true && (event.target === document.getElementById("Text1") || event.target === document.getElementById("Text2"))) {
         document.getElementById("main_body").style.cursor = "auto";
         value = false;
         const newDiv = document.createElement("div");
@@ -109,13 +114,13 @@ function changeCursor(event) {
         } else if (selected == 5) {
             newDiv.innerHTML = "&#10067";
         }
-        
+
 
         // Add the new div to the document body
         document.body.appendChild(newDiv);
 
         selected = -1;
-    } 
+    }
 }
 
 
