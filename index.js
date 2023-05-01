@@ -252,6 +252,7 @@ function init() {
 document.addEventListener('readystatechange', function () {
     if (document.readyState === "complete") {
         init();
+        init2();
     }
 });
 
@@ -283,16 +284,10 @@ getLocationOfMouseUp(function (highlightedText) {
     }
 });
 
-document.getElementById("main_body").addEventListener("click", function (event) {
-    if (isClick) {
-        isEndCoordsSet = false;
-    } 
-});
-
 
 
 // Establish WebSocket connection
-const socket = new WebSocket('localhost:8080');
+const socket = new WebSocket('ws://localhost:8080');
 
 // When WebSocket connection is opened
 socket.addEventListener('open', (event) => {
@@ -300,60 +295,67 @@ socket.addEventListener('open', (event) => {
 });
 
 // When WebSocket connection receives a message
-socket.addEventListener('message', (event) => {
-    const data = JSON.parse(event.data);
+function init2() {
+    socket.addEventListener('message', (event) => {
+        const data = JSON.parse(event.data);
 
-    // Append new message to chatbox
-    const newDiv0 = document.createElement("div");
-    var newContent = document.createTextNode("Me:");
-    newDiv0.style.position = "relative";
-    newDiv0.style.marginTop = "20px";
-    newDiv0.style.left = "10px";
-    newDiv0.style.width = "30px";
-    newDiv0.appendChild(newContent);
-    document.getElementById("innerChat").appendChild(newDiv0);
+        // Append new message to chatbox
+        const newDiv0 = document.createElement("div");
+        var newContent = document.createTextNode("Me:");
+        newDiv0.style.position = "relative";
+        newDiv0.style.marginTop = "20px";
+        newDiv0.style.left = "10px";
+        newDiv0.style.width = "30px";
+        newDiv0.appendChild(newContent);
+        document.getElementById("innerChat").appendChild(newDiv0);
 
-    const newDiv = document.createElement("div");
-    var newContent = document.createTextNode(data);
-    document.getElementById("freeform").value = "";
-    newDiv.style.position = "relative";
-    newDiv.style.top = "0px";
-    newDiv.style.padding = "10px";
-    newDiv.style.left = "100px";
-    newDiv.style.width = "330px";
-    newDiv.style.fontSize = "20px";
-    newDiv.style.borderStyle = "solid";
-    newDiv.style.borderWidth = "1px";
-    newDiv.style.borderColor = "black";
-    newDiv.style.borderRadius = "15px";
-    newDiv.style.marginTop = "-30px";
-    newDiv.appendChild(newContent);
-    document.getElementById("innerChat").appendChild(newDiv);
-    var objDiv = document.getElementById("chatbox");
-    objDiv.scrollTop = objDiv.scrollHeight;
-});
+        const newDiv = document.createElement("div");
+        var newContent = document.createTextNode(data);
+        document.getElementById("freeform").value = "";
+        newDiv.style.position = "relative";
+        newDiv.style.top = "0px";
+        newDiv.style.padding = "10px";
+        newDiv.style.left = "100px";
+        newDiv.style.width = "330px";
+        newDiv.style.fontSize = "20px";
+        newDiv.style.borderStyle = "solid";
+        newDiv.style.borderWidth = "1px";
+        newDiv.style.borderColor = "black";
+        newDiv.style.borderRadius = "15px";
+        newDiv.style.marginTop = "-30px";
+        newDiv.appendChild(newContent);
+        document.getElementById("innerChat").appendChild(newDiv);
+        var objDiv = document.getElementById("chatbox");
+        objDiv.scrollTop = objDiv.scrollHeight;
+    });
 
-// When form is submitted
-const form = document.querySelector('.textbox form');
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+    // When form is submitted
+    const form = document.querySelector('.textbox form');
+    var chatEnter = document.getElementById("freeform");
+    console.log(chatEnter);
+    chatEnter.addEventListener("keypress", function (event) {
+        // If the user presses the "Enter" key on the keyboard
+        if (event.key === "Enter") {
+            event.preventDefault();
 
-    // Get user's message
-    const textarea = document.getElementById('freeform');
-    const message = textarea.value.trim();
+            // Get user's message
+            const textarea = document.getElementById('freeform');
+            const message = textarea.value.trim();
 
-    // If message is not empty
-    if (message) {
-        print("reached");
-        // Send message over WebSocket connection
-        const data = {
-            name: 'Me',
-            message: message
-        };
-        socket.send(JSON.stringify(data));
+            // If message is not empty
+            if (message) {
+                print("reached");
+                // Send message over WebSocket connection
+                const data = {
+                    name: 'Me',
+                    message: message
+                };
+                socket.send(JSON.stringify(data));
 
-        // Clear textarea
-        textarea.value = '';
-    }
-});
+                // Clear textarea
+                textarea.value = '';
+            }
+        }
+    });
+}
 
