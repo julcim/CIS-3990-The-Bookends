@@ -1,8 +1,46 @@
 
 window.onload = function onEmojiChange() {
     var e = document.getElementById('reaction');
-    var text = e.options[e.selectedIndex].text;
-    document.getElementById('emoji').innerHTML = text;
+    if (e !== null) {
+        var text = e.options[e.selectedIndex].text;
+        document.getElementById('emoji').innerHTML = text;
+    }
+    const storedJsonString = localStorage.getItem('myData');
+    // Parse the string back to a JavaScript object
+    const storedJsonObj = JSON.parse(storedJsonString);
+    console.log(storedJsonObj);
+    for (const divName in storedJsonObj) {
+        console.log(divName);
+        console.log(storedJsonObj[divName]);
+
+        const newDiv0 = document.createElement("div");
+        var newContent = document.createTextNode("Greg:");
+        newDiv0.style.position = "relative";
+        newDiv0.style.marginTop = "20px";
+        newDiv0.style.left = "10px";
+        newDiv0.style.width = "30px";
+        newDiv0.appendChild(newContent);
+        document.getElementById("innerChat").appendChild(newDiv0);
+
+        const newDiv = document.createElement("div");
+        var newContent = document.createTextNode(storedJsonObj[divName]);
+        document.getElementById("freeform").value = "";
+        newDiv.style.position = "relative";
+        newDiv.style.top = "0px";
+        newDiv.style.padding = "10px";
+        newDiv.style.left = "100px";
+        newDiv.style.width = "330px";
+        newDiv.style.fontSize = "20px";
+        newDiv.style.borderStyle = "solid";
+        newDiv.style.borderWidth = "1px";
+        newDiv.style.borderColor = "black";
+        newDiv.style.borderRadius = "15px";
+        newDiv.style.marginTop = "-30px";
+        newDiv.appendChild(newContent);
+        document.getElementById("innerChat").appendChild(newDiv);
+        var objDiv = document.getElementById("chatbox");
+        objDiv.scrollTop = objDiv.scrollHeight;
+    }
 };
 function onEmojiChange() {
     var e = document.getElementById('reaction');
@@ -208,51 +246,63 @@ function toggleDiv(id) {
     // console.log(div.style);
     div.style.display = div.style.display == "none" ? "block" : "none";
 }
-
+// var counter = 0;
 function init() {
     var chatEnter = document.getElementById("freeform");
     // Execute a function when the user presses a key on the keyboard
-    chatEnter.addEventListener("keypress", function (event) {
-        // If the user presses the "Enter" key on the keyboard
-        if (event.key === "Enter") {
-            // Cancel the default action, if needed
-            event.preventDefault();
-            // Trigger the button element with a click
-            const newDiv0 = document.createElement("div");
-            var newContent = document.createTextNode("Me:");
-            newDiv0.style.position = "relative";
-            newDiv0.style.marginTop = "20px";
-            newDiv0.style.left = "10px";
-            newDiv0.style.width = "30px";
-            newDiv0.appendChild(newContent);
-            document.getElementById("innerChat").appendChild(newDiv0);
+    if (chatEnter !== null) {
+        chatEnter.addEventListener("keypress", function (event) {
+            // If the user presses the "Enter" key on the keyboard
+            if (event.key === "Enter") {
+                // Cancel the default action, if needed
+                event.preventDefault();
+                // Trigger the button element with a click
+                const newDiv0 = document.createElement("div");
+                var newContent = document.createTextNode("Me:");
+                newDiv0.style.position = "relative";
+                newDiv0.style.marginTop = "20px";
+                newDiv0.style.left = "10px";
+                newDiv0.style.width = "30px";
+                newDiv0.appendChild(newContent);
+                document.getElementById("innerChat").appendChild(newDiv0);
 
-            const newDiv = document.createElement("div");
-            var newContent = document.createTextNode(document.getElementById("freeform").value);
-            document.getElementById("freeform").value = "";
-            newDiv.style.position = "relative";
-            newDiv.style.top = "0px";
-            newDiv.style.padding = "10px";
-            newDiv.style.left = "100px";
-            newDiv.style.width = "330px";
-            newDiv.style.fontSize = "20px";
-            newDiv.style.borderStyle = "solid";
-            newDiv.style.borderWidth = "1px";
-            newDiv.style.borderColor = "black";
-            newDiv.style.borderRadius = "15px";
-            newDiv.style.marginTop = "-30px";
-            newDiv.appendChild(newContent);
-            document.getElementById("innerChat").appendChild(newDiv);
-            var objDiv = document.getElementById("chatbox");
-            objDiv.scrollTop = objDiv.scrollHeight;
-        }
-    });
+                const newDiv = document.createElement("div");
+                var newContent = document.createTextNode(document.getElementById("freeform").value);
+                document.getElementById("freeform").value = "";
+                newDiv.style.position = "relative";
+                newDiv.style.top = "0px";
+                newDiv.style.padding = "10px";
+                newDiv.style.left = "100px";
+                newDiv.style.width = "330px";
+                newDiv.style.fontSize = "20px";
+                newDiv.style.borderStyle = "solid";
+                newDiv.style.borderWidth = "1px";
+                newDiv.style.borderColor = "black";
+                newDiv.style.borderRadius = "15px";
+                newDiv.style.marginTop = "-30px";
+                newDiv.appendChild(newContent);
+                document.getElementById("innerChat").appendChild(newDiv);
+                var objDiv = document.getElementById("chatbox");
+                objDiv.scrollTop = objDiv.scrollHeight;
+
+                const existingData = localStorage.getItem('myData');
+
+                // If localStorage already has a value for 'myData', parse it into a JavaScript object
+                const jsonObj = existingData ? JSON.parse(existingData) : {};
+                var divName = "div" + Object.keys(jsonObj).length;
+                jsonObj[divName] = newDiv.textContent;
+                const jsonString = JSON.stringify(jsonObj);
+                // Save the string in localStorage
+                localStorage.setItem('myData', jsonString);
+            }
+        });
+    }
 }
 
 document.addEventListener('readystatechange', function () {
     if (document.readyState === "complete") {
         init();
-        init2();
+        // init2();
     }
 });
 
@@ -285,77 +335,4 @@ getLocationOfMouseUp(function (highlightedText) {
 });
 
 
-
-// Establish WebSocket connection
-const socket = new WebSocket('ws://localhost:8080');
-
-// When WebSocket connection is opened
-socket.addEventListener('open', (event) => {
-    console.log('WebSocket connection opened:', event);
-});
-
-// When WebSocket connection receives a message
-function init2() {
-    socket.addEventListener('message', (event) => {
-        const data = JSON.parse(event.data);
-
-        // Append new message to chatbox
-        const newDiv0 = document.createElement("div");
-        var newContent = document.createTextNode("Me:");
-        newDiv0.style.position = "relative";
-        newDiv0.style.marginTop = "20px";
-        newDiv0.style.left = "10px";
-        newDiv0.style.width = "30px";
-        newDiv0.appendChild(newContent);
-        document.getElementById("innerChat").appendChild(newDiv0);
-
-        const newDiv = document.createElement("div");
-        var newContent = document.createTextNode(data);
-        document.getElementById("freeform").value = "";
-        newDiv.style.position = "relative";
-        newDiv.style.top = "0px";
-        newDiv.style.padding = "10px";
-        newDiv.style.left = "100px";
-        newDiv.style.width = "330px";
-        newDiv.style.fontSize = "20px";
-        newDiv.style.borderStyle = "solid";
-        newDiv.style.borderWidth = "1px";
-        newDiv.style.borderColor = "black";
-        newDiv.style.borderRadius = "15px";
-        newDiv.style.marginTop = "-30px";
-        newDiv.appendChild(newContent);
-        document.getElementById("innerChat").appendChild(newDiv);
-        var objDiv = document.getElementById("chatbox");
-        objDiv.scrollTop = objDiv.scrollHeight;
-    });
-
-    // When form is submitted
-    const form = document.querySelector('.textbox form');
-    var chatEnter = document.getElementById("freeform");
-    console.log(chatEnter);
-    chatEnter.addEventListener("keypress", function (event) {
-        // If the user presses the "Enter" key on the keyboard
-        if (event.key === "Enter") {
-            event.preventDefault();
-
-            // Get user's message
-            const textarea = document.getElementById('freeform');
-            const message = textarea.value.trim();
-
-            // If message is not empty
-            if (message) {
-                print("reached");
-                // Send message over WebSocket connection
-                const data = {
-                    name: 'Me',
-                    message: message
-                };
-                socket.send(JSON.stringify(data));
-
-                // Clear textarea
-                textarea.value = '';
-            }
-        }
-    });
-}
 
